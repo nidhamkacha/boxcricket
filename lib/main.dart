@@ -1,4 +1,5 @@
 import 'package:boxcricket/Loading_screen.dart';
+import 'package:boxcricket/expanded_screen.dart';
 import 'package:boxcricket/onboding_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -19,8 +20,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoadingScreen(),
-      // home: onbodingScreen(),
+      // home: LoadingScreen(),
+      // home: ExpandedWidget(),
+      home: onbodingScreen(),
     );
   }
 }
