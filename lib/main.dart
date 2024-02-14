@@ -1,6 +1,8 @@
 import 'package:boxcricket/Loading_screen.dart';
 import 'package:boxcricket/expanded_screen.dart';
+import 'package:boxcricket/login_screen.dart';
 import 'package:boxcricket/onboding_screen.dart';
+import 'package:boxcricket/onboding_screen_second.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,7 +24,9 @@ class MyApp extends StatelessWidget {
       ),
       // home: LoadingScreen(),
       // home: ExpandedWidget(),
-      home: onbodingScreen(),
+      // home: onbodingScreen(),
+      // home: Second_onboding(),
+      home: LoginScreen(),
     );
   }
 }
