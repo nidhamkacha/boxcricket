@@ -1,3 +1,4 @@
+import 'package:boxcricket/HomeScreens/Home_Screen.dart';
 import 'package:boxcricket/HomeScreens/LocationScreen.dart';
 import 'package:boxcricket/LoadingScreen/Loading_screen.dart';
 import 'package:boxcricket/expanded_screen.dart';
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
       // home: onbodingScreen(),
       // home: Second_onboding(),
       // home: LoginScreen(),
-      home: LocationScreen(),
+      // home: LocationScreen(),
+      home: HomeScreen(),
     );
   }
 }
