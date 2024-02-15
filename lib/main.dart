@@ -1,8 +1,9 @@
-import 'package:boxcricket/Loading_screen.dart';
+import 'package:boxcricket/HomeScreens/LocationScreen.dart';
+import 'package:boxcricket/LoadingScreen/Loading_screen.dart';
 import 'package:boxcricket/expanded_screen.dart';
-import 'package:boxcricket/login_screen.dart';
-import 'package:boxcricket/onboding_screen.dart';
-import 'package:boxcricket/onboding_screen_second.dart';
+import 'package:boxcricket/LoginScreen/login_screen.dart';
+import 'package:boxcricket/onbodingScreens/onboding_screen.dart';
+import 'package:boxcricket/onbodingScreens/onboding_screen_second.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
       // home: ExpandedWidget(),
       // home: onbodingScreen(),
       // home: Second_onboding(),
-      home: LoginScreen(),
+      // home: LoginScreen(),
+      home: LocationScreen(),
     );
   }
 }
