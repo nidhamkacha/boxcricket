@@ -15,10 +15,10 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         children: [
           SizedBox(
-            height: 52,
+            height: 40,
           ),
           Container(
-            height: 43,
+            height: 50,
             width: double.infinity,
             color: Color(0XFF78A408),
             child: Row(
@@ -142,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontWeight: FontWeight.w400),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 60, top: 10),
+                      margin: EdgeInsets.only(left: 50, top: 10),
                       height: 40,
                       child: Center(
                           child: Text(
@@ -152,7 +152,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontSize: 10,
                             fontWeight: FontWeight.w700),
                       )),
-                      width: 80,
+                      width: 60,
                       decoration: BoxDecoration(
                           color: Color(0XFF78A408),
                           borderRadius: BorderRadius.circular(5)),
@@ -166,7 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Color(0XFF78A408),
                       // size: 10,
                     ),
-                    Text("capital cricket club, mota varachha",
+                    Text("Capital Cricket Club, Mota Varachha",
                         style: GoogleFonts.poppins(
                             color: Color(0XFF000000),
                             fontSize: 12,
@@ -254,7 +254,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontWeight: FontWeight.w400),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 60, top: 10),
+                      margin: EdgeInsets.only(left: 50, top: 10),
                       height: 40,
                       child: Center(
                           child: Text(
@@ -264,7 +264,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontSize: 10,
                             fontWeight: FontWeight.w700),
                       )),
-                      width: 80,
+                      width: 60,
                       decoration: BoxDecoration(
                           color: Color(0XFF78A408),
                           borderRadius: BorderRadius.circular(5)),
@@ -278,7 +278,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Color(0XFF78A408),
                       // size: 10,
                     ),
-                    Text("capital cricket club, mota varachha",
+                    Text("Power Play Truf, Dumas Road ",
                         style: GoogleFonts.poppins(
                             color: Color(0XFF000000),
                             fontSize: 12,
@@ -286,6 +286,35 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 46,
+              width: 370,
+              decoration: BoxDecoration(
+                  color: Color(0xFFffffff),
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: [BoxShadow(blurRadius: 0.5)]),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    height: 37,
+                    width: 37,
+                    decoration: BoxDecoration(
+                        color: Color(0XFF78A408), shape: BoxShape.circle),
+                    child: Icon(
+                      Icons.home_outlined,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Icon(Icons.event),
+                  Icon(Icons.sports_cricket_outlined),
+                  Icon(Icons.person_2_outlined)
+                ],
+              ),
             ),
           ),
         ],
