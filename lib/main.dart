@@ -29,10 +29,10 @@ class MyApp extends StatelessWidget {
       // home: ExpandedWidget(),
       // home: onbodingScreen(),
       // home: Second_onboding(),
-      // home: LoginScreen(),
+      home: LoginScreen(),
       // home: LocationScreen(),
       // home: HomeScreen(),
-      home: DiscoverScreen(),
+      // home: DiscoverScreen(),
     );
   }
 }
