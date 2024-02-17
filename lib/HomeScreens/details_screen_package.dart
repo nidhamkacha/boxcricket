@@ -206,7 +206,40 @@ class _DetailScreenState extends State<DetailScreen> {
               ],
             ),
           ),
-          
+          Row(
+            children: [
+              Container(
+                height: 19,
+                width: 176,
+                color: Color(0XFF78A408),
+                child: Center(
+                  child: Text(
+                    "Top Discount On First Booking !",
+                    style: GoogleFonts.poppins(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white),
+                  ),
+                ),
+              ),
+              Container(
+                height: 22,
+                width: 90,
+                decoration: BoxDecoration(
+                    color: Color(0XFF78A408),
+                    borderRadius: BorderRadius.circular(8)),
+                child: Center(
+                  child: Text(
+                    "Rs. 15000",
+                    style: GoogleFonts.poppins(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white),
+                  ),
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );
