@@ -207,6 +207,7 @@ class _DetailScreenState extends State<DetailScreen> {
             ),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 height: 19,
@@ -227,7 +228,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 width: 90,
                 decoration: BoxDecoration(
                     color: Color(0XFF78A408),
-                    borderRadius: BorderRadius.circular(8)),
+                    borderRadius: BorderRadius.circular(3)),
                 child: Center(
                   child: Text(
                     "Rs. 15000",
@@ -239,6 +240,21 @@ class _DetailScreenState extends State<DetailScreen> {
                 ),
               ),
             ],
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "Booking Information",
+              style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black),
+            ),
+          ),
+          Text(
+            "Your Full Name",
+            style: GoogleFonts.poppins(
+                fontSize: 16, fontWeight: FontWeight.w700, color: Colors.black),
           )
         ],
       ),
