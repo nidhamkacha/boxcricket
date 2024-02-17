@@ -20,6 +20,24 @@ class _DetailScreenState extends State<DetailScreen> {
           style: GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.w800),
         ),
       ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 343,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                image: DecorationImage(
+                    image: AssetImage("assets/images/Rectangle 391.png"),
+                    fit: BoxFit.fill),
+                border: Border.all(),
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
