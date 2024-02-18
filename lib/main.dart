@@ -2,6 +2,7 @@ import 'package:boxcricket/HomeScreens/Discover_Screen.dart';
 import 'package:boxcricket/HomeScreens/Home_Screen.dart';
 import 'package:boxcricket/HomeScreens/LocationScreen.dart';
 import 'package:boxcricket/HomeScreens/Payment_Screeen.dart';
+import 'package:boxcricket/HomeScreens/Payment_Sucess.dart';
 import 'package:boxcricket/HomeScreens/details_screen_package.dart';
 import 'package:boxcricket/LoadingScreen/Loading_screen.dart';
 import 'package:boxcricket/expanded_screen.dart';
@@ -36,7 +37,8 @@ class MyApp extends StatelessWidget {
       // home: HomeScreen(),
       // home: DiscoverScreen(),
       // home: DetailScreen(),
-      home: PaymentScreen(),
+      // home: PaymentScreen(),
+      home: PaymentSucess(),
     );
   }
 }
