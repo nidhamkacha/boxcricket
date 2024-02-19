@@ -1,3 +1,4 @@
+import 'package:boxcricket/EventsScreen/event_screen.dart';
 import 'package:boxcricket/HomeScreens/Discover_Screen.dart';
 import 'package:boxcricket/HomeScreens/Home_Screen.dart';
 import 'package:boxcricket/HomeScreens/LocationScreen.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
       // home: DiscoverScreen(),
       // home: DetailScreen(),
       // home: PaymentScreen(),
-      home: PaymentSucess(),
+      home: EventScreen(),
     );
   }
 }
