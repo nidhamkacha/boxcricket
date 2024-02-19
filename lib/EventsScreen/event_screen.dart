@@ -177,7 +177,7 @@ class _EventScreenState extends State<EventScreen> {
                               fontWeight: FontWeight.w500),
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 220, top: 3),
+                          margin: EdgeInsets.only(left: 200, top: 3),
                           height: 26,
                           width: 30,
                           decoration: BoxDecoration(
@@ -301,7 +301,7 @@ class _EventScreenState extends State<EventScreen> {
                               fontWeight: FontWeight.w500),
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 220, top: 3),
+                          margin: EdgeInsets.only(left: 200, top: 3),
                           height: 26,
                           width: 30,
                           decoration: BoxDecoration(
@@ -425,7 +425,7 @@ class _EventScreenState extends State<EventScreen> {
                               fontWeight: FontWeight.w500),
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 220, top: 3),
+                          margin: EdgeInsets.only(left: 200, top: 3),
                           height: 26,
                           width: 30,
                           decoration: BoxDecoration(
@@ -441,6 +441,35 @@ class _EventScreenState extends State<EventScreen> {
                     ),
                   ),
                 ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 46,
+                width: 370,
+                decoration: BoxDecoration(
+                    color: Color(0xFFffffff),
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [BoxShadow(blurRadius: 0.5)]),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                      height: 37,
+                      width: 37,
+                      decoration: BoxDecoration(
+                          color: Color(0XFF78A408), shape: BoxShape.circle),
+                      child: Icon(
+                        Icons.home_outlined,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Icon(Icons.event),
+                    Icon(Icons.sports_cricket_outlined),
+                    Icon(Icons.person_2_outlined)
+                  ],
+                ),
               ),
             ), //first container Over
           ],
