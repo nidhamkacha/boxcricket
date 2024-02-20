@@ -19,7 +19,6 @@ class _FilterScreenState extends State<FilterScreen> {
           "FILTER",
           style: GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.w800),
         ),
-        actions: [Icon(Icons.filter_alt_outlined)],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -126,17 +125,26 @@ class _FilterScreenState extends State<FilterScreen> {
               ],
             ),
           ),
-          Divider(),
+          Divider(
+            indent: 10,
+            endIndent: 10,
+            color: Colors.black,
+          ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              "DIScTANCE",
+              "DISTANCE",
               style: GoogleFonts.poppins(
                   color: Colors.black,
                   fontSize: 20,
                   fontWeight: FontWeight.w700),
             ),
           ),
+          Container(
+            height: 4,
+            width: 311,
+            color: Color(0XFF78A408),
+          )
         ],
       ),
     );
