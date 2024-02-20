@@ -208,6 +208,183 @@ class _FilterScreenState extends State<FilterScreen> {
                   fontWeight: FontWeight.w700),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(left: 15),
+                  height: 20,
+                  width: 20,
+                  decoration: BoxDecoration(
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(3)),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text("Umpires",
+                    style: GoogleFonts.poppins(
+                        color: Color(0XFF000000),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600)),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(left: 15),
+                  height: 20,
+                  width: 20,
+                  decoration: BoxDecoration(
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(3)),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text("Balls",
+                    style: GoogleFonts.poppins(
+                        color: Color(0XFF000000),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600)),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(left: 15),
+                  height: 20,
+                  width: 20,
+                  decoration: BoxDecoration(
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(3)),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text("Flood Lights",
+                    style: GoogleFonts.poppins(
+                        color: Color(0XFF000000),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600)),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(left: 15),
+                  height: 20,
+                  width: 20,
+                  decoration: BoxDecoration(
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(3)),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text("Water",
+                    style: GoogleFonts.poppins(
+                        color: Color(0XFF000000),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600)),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(left: 15),
+                  height: 20,
+                  width: 20,
+                  decoration: BoxDecoration(
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(3)),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text("Sight Screen",
+                    style: GoogleFonts.poppins(
+                        color: Color(0XFF000000),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600)),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(left: 15),
+                  height: 20,
+                  width: 20,
+                  decoration: BoxDecoration(
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(3)),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text("Refreshments",
+                    style: GoogleFonts.poppins(
+                        color: Color(0XFF000000),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600)),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(left: 15),
+                  height: 20,
+                  width: 20,
+                  decoration: BoxDecoration(
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(3)),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text("Washroom",
+                    style: GoogleFonts.poppins(
+                        color: Color(0XFF000000),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600)),
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(5),
+            height: 40,
+            child: Center(
+                child: Text(
+              "APPLY",
+              style: GoogleFonts.poppins(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700),
+            )),
+            width: double.infinity,
+            decoration: BoxDecoration(
+                color: Color(0XFF78A408),
+                borderRadius: BorderRadius.circular(10)),
+          ),
         ],
       ),
     );
