@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "293868450791",
+    "project_id": "practiceapp-274b4",
+    "storage_bucket": "practiceapp-274b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293868450791:android:8c79595cfc8149467a0342",
+        "android_client_info": {
+          "package_name": "com.example.boxcricket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKhiVsGENplmWbbujw8cJvBQ5em2QhLXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
