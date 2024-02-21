@@ -79,29 +79,90 @@ class _DetailsState extends State<Details> {
                     Expanded(
                       child: Container(
                         height: 55,
-                        width: 180,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Row(
                               children: [
                                 Icon(Icons.calendar_month_outlined),
+                                SizedBox(
+                                  width: 10,
+                                ),
                                 Text("Fri,June 24-Sun,June 26")
                               ],
                             ),
                             Row(
-                              children: [Icon(Icons.timer), Text("05:00 AM")],
+                              children: [
+                                Icon(Icons.timer),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("05:00 AM")
+                              ],
                             )
                           ],
                         ),
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 10),
+                      margin: EdgeInsets.only(top: 10, left: 10),
                       height: 55,
-                      width: 36,
-                      child: Icon(Icons.share),
+                      width: 50,
+                      child: Column(
+                        children: [Icon(Icons.share), Text("Share")],
+                      ),
                     )
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Stack(
+                      children: [
+                        Container(
+                          height: 38,
+                          width: 38,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      "assets/images/Ellipse 222.png"),
+                                  fit: BoxFit.fill)),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Container(
+                            height: 38,
+                            width: 38,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/Ellipse 223.png"),
+                                    fit: BoxFit.fill)),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 12),
+                          child: Container(
+                            height: 38,
+                            width: 38,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/Ellipse 225.png"),
+                                    fit: BoxFit.fill)),
+                          ),
+                        ),
+                        Container(
+                          height: 38,
+                          width: 38,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      "assets/images/Ellipse 226.png"),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ],
+                    ),
                   ],
                 )
               ],
