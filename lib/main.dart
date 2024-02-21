@@ -14,9 +14,6 @@ import 'package:boxcricket/onbodingScreens/onboding_screen.dart';
 import 'package:boxcricket/onbodingScreens/onboding_screen_second.dart';
 import 'package:flutter/material.dart';
 
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -45,8 +42,8 @@ class MyApp extends StatelessWidget {
       // home: DetailScreen(),
       // home: PaymentScreen(),
       // home: EventScreen(),
-      // home: FilterScreen(),
-      home: Details(),
+      home: FilterScreen(),
+      // home: Details(),
     );
   }
 }
