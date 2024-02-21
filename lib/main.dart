@@ -42,8 +42,8 @@ class MyApp extends StatelessWidget {
       // home: DetailScreen(),
       // home: PaymentScreen(),
       // home: EventScreen(),
-      home: FilterScreen(),
-      // home: Details(),
+      // home: FilterScreen(),
+      home: Details(),
     );
   }
 }

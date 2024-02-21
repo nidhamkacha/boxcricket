@@ -74,21 +74,35 @@ class _DetailsState extends State<Details> {
                           image: AssetImage("assets/images/Rectangle 412.png"),
                           fit: BoxFit.fill)),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      Icon(Icons.calendar_month_outlined),
-                      SizedBox(
-                        width: 15,
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        height: 55,
+                        width: 180,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Icon(Icons.calendar_month_outlined),
+                                Text("Fri,June 24-Sun,June 26")
+                              ],
+                            ),
+                            Row(
+                              children: [Icon(Icons.timer), Text("05:00 AM")],
+                            )
+                          ],
+                        ),
                       ),
-                      Text(
-                        "Fri,June 24-Sun,June 26",
-                        style: GoogleFonts.poppins(
-                            fontSize: 12, fontWeight: FontWeight.w500),
-                      )
-                    ],
-                  ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 10),
+                      height: 55,
+                      width: 36,
+                      child: Icon(Icons.share),
+                    )
+                  ],
                 )
               ],
             ),
