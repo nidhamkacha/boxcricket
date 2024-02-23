@@ -265,23 +265,27 @@ class _DetailScreenState extends State<DetailScreen> {
                     fontWeight: FontWeight.w700,
                     color: Colors.black),
               ),
-              Container(
-                margin: EdgeInsets.all(4),
-                height: 52,
-                width: double.infinity,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    "Enter Your Full Name",
-                    style: GoogleFonts.poppins(
+              SizedBox(
+                height: 50,
+                child: TextField(
+                  style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      color: Color(0XFF78A408),
+                      fontWeight: FontWeight.w500),
+                  // controller: _name,
+                  cursorColor: Colors.amber,
+                  decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Color(0XFF78A408))),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    hintText: "Enter Your Full Name",
+                    hintStyle: GoogleFonts.poppins(
                         color: Colors.black45,
-                        fontSize: 20,
+                        fontSize: 17,
                         fontWeight: FontWeight.w600),
                   ),
                 ),
-                decoration: BoxDecoration(
-                    border: Border.all(),
-                    borderRadius: BorderRadius.circular(10)),
               ),
               Text(
                 "Your Mobile Number",
@@ -290,23 +294,27 @@ class _DetailScreenState extends State<DetailScreen> {
                     fontWeight: FontWeight.w700,
                     color: Colors.black),
               ),
-              Container(
-                margin: EdgeInsets.all(4),
-                height: 52,
-                width: double.infinity,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    "Enter Your Mobile Number",
-                    style: GoogleFonts.poppins(
+              SizedBox(
+                height: 50,
+                child: TextField(
+                  style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      color: Color(0XFF78A408),
+                      fontWeight: FontWeight.w500),
+                  // controller: _name,
+                  cursorColor: Colors.amber,
+                  decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Color(0XFF78A408))),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    hintText: "Enter Your Mobile Number",
+                    hintStyle: GoogleFonts.poppins(
                         color: Colors.black45,
-                        fontSize: 20,
+                        fontSize: 17,
                         fontWeight: FontWeight.w600),
                   ),
                 ),
-                decoration: BoxDecoration(
-                    border: Border.all(),
-                    borderRadius: BorderRadius.circular(10)),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -333,64 +341,73 @@ class _DetailScreenState extends State<DetailScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                    margin: EdgeInsets.all(4),
-                    height: 52,
+                  SizedBox(
+                    height: 50,
                     width: 161,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Center(
-                        child: Text(
-                          "Select Date",
-                          style: GoogleFonts.poppins(
-                              color: Colors.black45,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600),
-                        ),
+                    child: TextField(
+                      style: GoogleFonts.poppins(
+                          fontSize: 20,
+                          color: Color(0XFF78A408),
+                          fontWeight: FontWeight.w500),
+                      // controller: _name,
+                      cursorColor: Colors.amber,
+                      decoration: InputDecoration(
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Color(0XFF78A408))),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        hintText: "Select Date",
+                        hintStyle: GoogleFonts.poppins(
+                            color: Colors.black45,
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600),
                       ),
                     ),
-                    decoration: BoxDecoration(
-                        border: Border.all(),
-                        borderRadius: BorderRadius.circular(10)),
                   ),
-                  Container(
-                    margin: EdgeInsets.all(4),
-                    height: 52,
+                  SizedBox(
+                    height: 50,
                     width: 161,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Center(
-                        child: Text(
-                          "Select Time",
-                          style: GoogleFonts.poppins(
-                              color: Colors.black45,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600),
-                        ),
+                    child: TextField(
+                      style: GoogleFonts.poppins(
+                          fontSize: 20,
+                          color: Color(0XFF78A408),
+                          fontWeight: FontWeight.w500),
+                      // controller: _name,
+                      cursorColor: Colors.amber,
+                      decoration: InputDecoration(
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Color(0XFF78A408))),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        hintText: "Select Time",
+                        hintStyle: GoogleFonts.poppins(
+                            color: Colors.black45,
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600),
                       ),
                     ),
-                    decoration: BoxDecoration(
-                        border: Border.all(),
-                        borderRadius: BorderRadius.circular(10)),
                   ),
                 ],
               ),
-              SizedBox(
-                height: 46,
-                width: double.infinity,
-                child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0XFF78A408),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(7))),
-                    child: Text(
-                      "BOOK NOW",
-                      style: GoogleFonts.poppins(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w700),
-                    )),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                  height: 46,
+                  width: double.infinity,
+                  child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0XFF78A408),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(7))),
+                      child: Text(
+                        "BOOK NOW",
+                        style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w700),
+                      )),
+                ),
               ),
             ],
           ),
