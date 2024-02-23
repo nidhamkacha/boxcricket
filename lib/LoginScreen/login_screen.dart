@@ -9,6 +9,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  TextEditingController _name = TextEditingController();
+  TextEditingController _number = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,23 +79,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     ],
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.all(4),
-                  height: 55,
-                  width: double.infinity,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      "Enter Your Full Name",
-                      style: GoogleFonts.poppins(
-                          color: Colors.black45,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600),
-                    ),
+                TextField(
+                  controller: _name,
+                  decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Color(0XFF78A408))),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    hintText: "Enter Your Full Name",
+                    hintStyle: GoogleFonts.poppins(
+                        color: Colors.black45,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600),
                   ),
-                  decoration: BoxDecoration(
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(10)),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -106,23 +105,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     ],
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.all(4),
-                  height: 55,
-                  width: double.infinity,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      "Enter Your Mobile Number",
-                      style: GoogleFonts.poppins(
-                          color: Colors.black45,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600),
-                    ),
+                TextField(
+                  controller: _number,
+                  decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Color(0XFF78A408))),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    hintText: "Enter Your Mobile Number",
+                    hintStyle: GoogleFonts.poppins(
+                        color: Colors.black45,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600),
                   ),
-                  decoration: BoxDecoration(
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(10)),
                 ),
                 SizedBox(
                   height: 20,
@@ -144,6 +139,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontWeight: FontWeight.w700),
                       )),
                 ),
+                Text(_name.text)
               ],
             ),
           ),
