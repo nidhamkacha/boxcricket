@@ -50,12 +50,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
-                      Icons.arrow_back,
-                      size: 24,
-                    ),
+                    IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
                     SizedBox(
-                      width: 20,
+                      width: 15,
                     ),
                     Text(
                       "LOGIN TO ACCOUNT",
@@ -80,7 +77,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 TextField(
-                  controller: _name,
+                  style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      color: Color(0XFF78A408),
+                      fontWeight: FontWeight.w500),
+                  // controller: _name,
+                  cursorColor: Colors.amber,
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Color(0XFF78A408))),
@@ -92,6 +94,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         fontSize: 17,
                         fontWeight: FontWeight.w600),
                   ),
+                ),
+                SizedBox(
+                  height: 10,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -106,7 +111,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 TextField(
-                  controller: _number,
+                  cursorColor: Colors.amber,
+                  style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      color: Color(0XFF78A408),
+                      fontWeight: FontWeight.w500),
+                  // controller: _number,
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Color(0XFF78A408))),
@@ -123,7 +133,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 20,
                 ),
                 SizedBox(
-                  height: 46,
+                  height: 55,
                   width: double.infinity,
                   child: ElevatedButton(
                       onPressed: () {},
@@ -139,7 +149,6 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontWeight: FontWeight.w700),
                       )),
                 ),
-                Text(_name.text)
               ],
             ),
           ),
