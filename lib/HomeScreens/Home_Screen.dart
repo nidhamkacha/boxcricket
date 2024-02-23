@@ -40,31 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 10,
             ),
-            // Container(
-            //   margin: EdgeInsets.all(4),
-            //   height: 55,
-            //   width: double.infinity,
-            //   child: Padding(
-            //       padding: const EdgeInsets.all(8.0),
-            //       child: Row(
-            //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //         children: [
-            //           Icon(
-            //             Icons.search_sharp,
-            //           ),
-            //           Text(
-            //             "Search",
-            //             style: GoogleFonts.poppins(
-            //                 color: Colors.black45,
-            //                 fontSize: 20,
-            //                 fontWeight: FontWeight.w600),
-            //           ),
-            //           Icon(Icons.mic_none),
-            //         ],
-            //       )),
-            //   decoration: BoxDecoration(
-            //       border: Border.all(), borderRadius: BorderRadius.circular(10)),
-            // ),
+            
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: SizedBox(

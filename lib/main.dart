@@ -40,10 +40,10 @@ class MyApp extends StatelessWidget {
       // home: HomeScreen(),
       // home: DiscoverScreen(),
       // home: DetailScreen(),
-      home: PaymentScreen(),
+      // home: PaymentScreen(),
       // home: EventScreen(),
       // home: FilterScreen(),
-      // home: Details(),
+      home: Details(),
     );
   }
 }

@@ -21,6 +21,7 @@ class _DetailsState extends State<Details> {
         ),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             margin: EdgeInsets.all(8),
@@ -115,7 +116,7 @@ class _DetailsState extends State<Details> {
                   ],
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Stack(
                       children: [
@@ -129,7 +130,7 @@ class _DetailsState extends State<Details> {
                                   fit: BoxFit.fill)),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 8.0),
+                          padding: const EdgeInsets.only(left: 16.0),
                           child: Container(
                             height: 38,
                             width: 38,
@@ -141,7 +142,7 @@ class _DetailsState extends State<Details> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 12),
+                          padding: const EdgeInsets.only(left: 55),
                           child: Container(
                             height: 38,
                             width: 38,
@@ -152,22 +153,58 @@ class _DetailsState extends State<Details> {
                                     fit: BoxFit.fill)),
                           ),
                         ),
-                        Container(
-                          height: 38,
-                          width: 38,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      "assets/images/Ellipse 226.png"),
-                                  fit: BoxFit.fill)),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 35),
+                          child: Container(
+                            height: 38,
+                            width: 38,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/Ellipse 226.png"),
+                                    fit: BoxFit.fill)),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 80),
+                          child: Container(
+                            height: 38,
+                            width: 38,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/Ellipse 227.png"),
+                                    fit: BoxFit.fill)),
+                          ),
                         ),
                       ],
                     ),
+                    Text(
+                      "19 People Are Going",
+                      style: GoogleFonts.poppins(
+                          fontSize: 12, fontWeight: FontWeight.w700),
+                    )
                   ],
                 )
               ],
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "Location",
+              style: GoogleFonts.poppins(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700),
+            ),
+          ),
+          Container(
+              height: 229,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/Rectangle 1092.png")))),
         ],
       ),
     );
