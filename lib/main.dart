@@ -9,6 +9,8 @@ import 'package:boxcricket/HomeScreens/Payment_Screeen.dart';
 import 'package:boxcricket/HomeScreens/Payment_Sucess.dart';
 import 'package:boxcricket/HomeScreens/details_screen_package.dart';
 import 'package:boxcricket/LoadingScreen/Loading_screen.dart';
+import 'package:boxcricket/bookingscreen/addboxscreen.dart';
+import 'package:boxcricket/bookingscreen/mybooking.dart';
 import 'package:boxcricket/expanded_screen.dart';
 import 'package:boxcricket/LoginScreen/login_screen.dart';
 import 'package:boxcricket/onbodingScreens/onboding_screen.dart';
@@ -45,7 +47,9 @@ class MyApp extends StatelessWidget {
       // home: EventScreen(),
       // home: FilterScreen(),
       // home: Details(),
-      home: ConfirmationScreen(),
+      // home: ConfirmationScreen(),
+      // home: MyBookingScreen(),
+      home: AddboxScreen(),
     );
   }
 }
