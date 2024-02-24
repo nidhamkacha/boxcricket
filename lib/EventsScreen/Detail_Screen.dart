@@ -20,8 +20,7 @@ class _DetailsState extends State<Details> {
           style: GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.w800),
         ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: ListView(
         children: [
           Container(
             margin: EdgeInsets.all(8),
@@ -177,6 +176,18 @@ class _DetailsState extends State<Details> {
                                     fit: BoxFit.fill)),
                           ),
                         ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 100),
+                          child: Container(
+                            height: 38,
+                            width: 38,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/Group 817.png"),
+                                    fit: BoxFit.fill)),
+                          ),
+                        ),
                       ],
                     ),
                     Text(
@@ -205,6 +216,109 @@ class _DetailsState extends State<Details> {
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage("assets/images/Rectangle 1092.png")))),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "Join Event Information",
+              style: GoogleFonts.poppins(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Your Full Name",
+                  style: GoogleFonts.poppins(
+                      fontSize: 24, fontWeight: FontWeight.w600),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              style: GoogleFonts.poppins(
+                  fontSize: 20,
+                  color: Color(0XFF78A408),
+                  fontWeight: FontWeight.w500),
+              // controller: _name,
+              cursorColor: Colors.amber,
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Color(0XFF78A408))),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                hintText: "Enter Your Full Name",
+                hintStyle: GoogleFonts.poppins(
+                    color: Colors.black45,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Mobile Number",
+                  style: GoogleFonts.poppins(
+                      fontSize: 24, fontWeight: FontWeight.w600),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              cursorColor: Colors.amber,
+              style: GoogleFonts.poppins(
+                  fontSize: 20,
+                  color: Color(0XFF78A408),
+                  fontWeight: FontWeight.w500),
+              // controller: _number,
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Color(0XFF78A408))),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                hintText: "Enter Your Mobile Number",
+                hintStyle: GoogleFonts.poppins(
+                    color: Colors.black45,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SizedBox(
+              height: 55,
+              width: double.infinity,
+              child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0XFF78A408),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(7))),
+                  child: Text(
+                    "JOIN EVENT",
+                    style: GoogleFonts.poppins(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700),
+                  )),
+            ),
+          ),
         ],
       ),
     );

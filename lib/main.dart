@@ -1,5 +1,6 @@
 import 'package:boxcricket/EventsScreen/Detail_Screen.dart';
 import 'package:boxcricket/EventsScreen/Filter_Screen.dart';
+import 'package:boxcricket/EventsScreen/confirmation.dart';
 import 'package:boxcricket/EventsScreen/event_screen.dart';
 import 'package:boxcricket/HomeScreens/Discover_Screen.dart';
 import 'package:boxcricket/HomeScreens/Home_Screen.dart';
@@ -43,7 +44,8 @@ class MyApp extends StatelessWidget {
       // home: PaymentScreen(),
       // home: EventScreen(),
       // home: FilterScreen(),
-      home: Details(),
+      // home: Details(),
+      home: ConfirmationScreen(),
     );
   }
 }
