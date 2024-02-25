@@ -10,11 +10,14 @@ import 'package:boxcricket/HomeScreens/Payment_Sucess.dart';
 import 'package:boxcricket/HomeScreens/details_screen_package.dart';
 import 'package:boxcricket/LoadingScreen/Loading_screen.dart';
 import 'package:boxcricket/bookingscreen/addboxscreen.dart';
+import 'package:boxcricket/bookingscreen/filterbox.dart';
 import 'package:boxcricket/bookingscreen/mybooking.dart';
+import 'package:boxcricket/bookingscreen/selectboxscreen.dart';
 import 'package:boxcricket/expanded_screen.dart';
 import 'package:boxcricket/LoginScreen/login_screen.dart';
 import 'package:boxcricket/onbodingScreens/onboding_screen.dart';
 import 'package:boxcricket/onbodingScreens/onboding_screen_second.dart';
+import 'package:boxcricket/profilescreen/profile.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -49,7 +52,10 @@ class MyApp extends StatelessWidget {
       // home: Details(),
       // home: ConfirmationScreen(),
       // home: MyBookingScreen(),
-      home: AddboxScreen(),
+      // home: AddboxScreen(),
+      // home: SelectBoxScreen(),
+      // home: BoxFilterScreen(),
+      home: ProfileScreen(),
     );
   }
 }

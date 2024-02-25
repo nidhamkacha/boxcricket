@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class FilterScreen extends StatefulWidget {
-  const FilterScreen({super.key});
+class BoxFilterScreen extends StatefulWidget {
+  const BoxFilterScreen({super.key});
 
   @override
-  State<FilterScreen> createState() => _FilterScreenState();
+  State<BoxFilterScreen> createState() => _BoxFilterScreenState();
 }
 
-class _FilterScreenState extends State<FilterScreen> {
+class _BoxFilterScreenState extends State<BoxFilterScreen> {
   double _currentSliderValue = 10;
+  bool? isChecked = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +29,7 @@ class _FilterScreenState extends State<FilterScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "TAGS",
+                "SLOT TIMINGS",
                 style: GoogleFonts.poppins(
                     color: Colors.black,
                     fontSize: 20,
@@ -50,11 +51,19 @@ class _FilterScreenState extends State<FilterScreen> {
                   SizedBox(
                     width: 10,
                   ),
-                  Text("Near You",
+                  Text("Morning",
                       style: GoogleFonts.poppins(
                           color: Color(0XFF000000),
                           fontSize: 16,
                           fontWeight: FontWeight.w600)),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 125),
+                    child: Text("6 Am To 12 Am",
+                        style: GoogleFonts.poppins(
+                            color: Color(0XFF707070),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400)),
+                  )
                 ],
               ),
             ),
@@ -73,11 +82,19 @@ class _FilterScreenState extends State<FilterScreen> {
                   SizedBox(
                     width: 10,
                   ),
-                  Text("Local Match",
+                  Text("Afternoon",
                       style: GoogleFonts.poppins(
                           color: Color(0XFF000000),
                           fontSize: 16,
                           fontWeight: FontWeight.w600)),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 110.0),
+                    child: Text("6 Am To 12 Am",
+                        style: GoogleFonts.poppins(
+                            color: Color(0XFF707070),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400)),
+                  )
                 ],
               ),
             ),
@@ -96,11 +113,19 @@ class _FilterScreenState extends State<FilterScreen> {
                   SizedBox(
                     width: 10,
                   ),
-                  Text("National Level",
+                  Text("Evening",
                       style: GoogleFonts.poppins(
                           color: Color(0XFF000000),
                           fontSize: 16,
                           fontWeight: FontWeight.w600)),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 128.0),
+                    child: Text("6 Am To 12 Am",
+                        style: GoogleFonts.poppins(
+                            color: Color(0XFF707070),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400)),
+                  )
                 ],
               ),
             ),
@@ -119,11 +144,19 @@ class _FilterScreenState extends State<FilterScreen> {
                   SizedBox(
                     width: 10,
                   ),
-                  Text("Practice Session",
+                  Text("Late Night",
                       style: GoogleFonts.poppins(
                           color: Color(0XFF000000),
                           fontSize: 16,
                           fontWeight: FontWeight.w600)),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 110),
+                    child: Text("6 Am To 12 Am",
+                        style: GoogleFonts.poppins(
+                            color: Color(0XFF707070),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400)),
+                  )
                 ],
               ),
             ),
@@ -134,12 +167,27 @@ class _FilterScreenState extends State<FilterScreen> {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "DISTANCE",
-                style: GoogleFonts.poppins(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "STAR RATING",
+                    style: GoogleFonts.poppins(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 30.0),
+                    child: Text(
+                      "0.00 - 5.00",
+                      style: GoogleFonts.poppins(
+                          color: Colors.black,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                ],
               ),
             ),
             Slider(
@@ -164,7 +212,7 @@ class _FilterScreenState extends State<FilterScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "DATE",
+                "GROUND NAME",
                 style: GoogleFonts.poppins(
                     color: Colors.black,
                     fontSize: 20,
@@ -182,13 +230,14 @@ class _FilterScreenState extends State<FilterScreen> {
                       fontWeight: FontWeight.w500),
                   // controller: _name,
                   cursorColor: Colors.amber,
+
                   decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.calendar_month),
+                    suffixIcon: Icon(Icons.arrow_forward_ios_rounded),
                     focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Color(0XFF78A408))),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10)),
-                    hintText: "Select Date",
+                    hintText: "Ground Name",
                     hintStyle: GoogleFonts.poppins(
                         color: Colors.black45,
                         fontSize: 17,
@@ -196,11 +245,6 @@ class _FilterScreenState extends State<FilterScreen> {
                   ),
                 ),
               ),
-            ),
-            Divider(
-              indent: 10,
-              endIndent: 10,
-              color: Colors.black,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),

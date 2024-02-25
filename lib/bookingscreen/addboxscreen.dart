@@ -191,6 +191,33 @@ class _AddboxScreenState extends State<AddboxScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: SizedBox(
+                height: 50,
+                child: TextField(
+                  style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      color: Color(0XFF78A408),
+                      fontWeight: FontWeight.w500),
+                  // controller: _name,
+                  cursorColor: Colors.amber,
+
+                  decoration: InputDecoration(
+                    suffixIcon: Icon(Icons.arrow_forward_ios_rounded),
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Color(0XFF78A408))),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    hintText: "Facality",
+                    hintStyle: GoogleFonts.poppins(
+                        color: Colors.black45,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
                 height: 46,
                 width: double.infinity,
                 child: ElevatedButton(
@@ -200,7 +227,7 @@ class _AddboxScreenState extends State<AddboxScreen> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(7))),
                     child: Text(
-                      "BOOK NOW",
+                      "NEXT",
                       style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 20,
