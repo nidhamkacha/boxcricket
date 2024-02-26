@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class EditprofileScreen extends StatefulWidget {
@@ -21,20 +22,112 @@ class _EditprofileScreenState extends State<EditprofileScreen> {
         ),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                height: 107,
-                width: 103,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("assets/images/Mask group.png"),
-                        fit: BoxFit.fill)),
+          Align(
+            alignment: Alignment.center,
+            child: Image(
+              alignment: Alignment.center,
+              image: AssetImage("assets/images/profile.png"),
+              height: 107,
+              width: 103,
+              fit: BoxFit.fill,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Text(
+                  "Enter Your Full Name",
+                  style: GoogleFonts.poppins(
+                      fontSize: 24, fontWeight: FontWeight.w600),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              style: GoogleFonts.poppins(
+                  fontSize: 20,
+                  color: Color(0XFF78A408),
+                  fontWeight: FontWeight.w500),
+              // controller: _name,
+              cursorColor: Colors.amber,
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Color(0XFF78A408))),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                hintText: "Enter Your Full Name",
+                hintStyle: GoogleFonts.poppins(
+                    color: Colors.black45,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600),
               ),
-            ],
-          )
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Text(
+                  "Enter Your Contact Number",
+                  style: GoogleFonts.poppins(
+                      fontSize: 24, fontWeight: FontWeight.w600),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              cursorColor: Colors.amber,
+              style: GoogleFonts.poppins(
+                  fontSize: 20,
+                  color: Color(0XFF78A408),
+                  fontWeight: FontWeight.w500),
+              // controller: _number,
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Color(0XFF78A408))),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                hintText: "Enter Your Mobile Number",
+                hintStyle: GoogleFonts.poppins(
+                    color: Colors.black45,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SizedBox(
+              height: 55,
+              width: double.infinity,
+              child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0XFF78A408),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(7))),
+                  child: Text(
+                    "SAVE",
+                    style: GoogleFonts.poppins(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700),
+                  )),
+            ),
+          ),
         ],
       ),
     );

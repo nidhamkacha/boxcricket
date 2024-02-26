@@ -18,6 +18,7 @@ import 'package:boxcricket/LoginScreen/login_screen.dart';
 import 'package:boxcricket/onbodingScreens/onboding_screen.dart';
 import 'package:boxcricket/onbodingScreens/onboding_screen_second.dart';
 import 'package:boxcricket/profilescreen/editprofile.dart';
+import 'package:boxcricket/profilescreen/languagescreen.dart';
 import 'package:boxcricket/profilescreen/profile.dart';
 import 'package:flutter/material.dart';
 
@@ -57,7 +58,8 @@ class MyApp extends StatelessWidget {
       // home: SelectBoxScreen(),
       // home: BoxFilterScreen(),
       // home: ProfileScreen(),
-      home: EditprofileScreen(),
+      // home: EditprofileScreen(),
+      home: LanguageScreen(),
     );
   }
 }

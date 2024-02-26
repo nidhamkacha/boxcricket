@@ -21,7 +21,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                "assets/images/Mask group.png",
+                "assets/images/profile.png",
                 height: 107,
                 width: 107,
                 fit: BoxFit.fill,
