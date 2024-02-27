@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DetailScreen extends StatefulWidget {
@@ -9,6 +11,12 @@ class DetailScreen extends StatefulWidget {
 }
 
 class _DetailScreenState extends State<DetailScreen> {
+  List<String> imagesname = [
+    "assets/images/Vector (1).png",
+    "assets/images/Vector (2).png",
+    "assets/images/Vector (3).png",
+    "assets/images/Vector (4).png",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,9 +28,9 @@ class _DetailScreenState extends State<DetailScreen> {
           style: GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.w800),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -86,37 +94,24 @@ class _DetailScreenState extends State<DetailScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Container(
+                    SizedBox(
                       height: 62,
-                      width: 75,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image:
-                                  AssetImage("assets/images/Vector (1).png"))),
-                    ),
-                    Container(
-                      height: 62,
-                      width: 75,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image:
-                                  AssetImage("assets/images/Vector (2).png"))),
-                    ),
-                    Container(
-                      height: 62,
-                      width: 75,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image:
-                                  AssetImage("assets/images/Vector (3).png"))),
-                    ),
-                    Container(
-                      height: 62,
-                      width: 75,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image:
-                                  AssetImage("assets/images/Vector (4).png"))),
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        shrinkWrap: true,
+                        itemCount: imagesname.length,
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Container(
+                              width: 75,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(imagesname[index]))),
+                            ),
+                          );
+                        },
+                      ),
                     ),
                   ],
                 ),
