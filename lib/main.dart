@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
       // home: LoginScreen(),
       // home: LocationScreen(),
       // home: HomeScreen(),
-      // home: DiscoverScreen(),
+      home: DiscoverScreen(),
       // home: DetailScreen(),
       // home: PaymentScreen(),
       // home: EventScreen(),
@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
       // home: AddboxScreen(),
       // home: SelectBoxScreen(),
       // home: BoxFilterScreen(),
-      home: ProfileScreen(),
+      // home: ProfileScreen(),
       // home: EditprofileScreen(),
       // home: LanguageScreen(),
     );
