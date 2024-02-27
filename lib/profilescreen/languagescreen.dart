@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LanguageScreen extends StatefulWidget {
@@ -9,6 +10,14 @@ class LanguageScreen extends StatefulWidget {
 }
 
 class _LanguageScreenState extends State<LanguageScreen> {
+  List<String> languages = [
+    'English',
+    'ગુજરાતી',
+    'हिंदी',
+    'मराठी',
+    'தமிழ்',
+    'اردو',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,106 +31,29 @@ class _LanguageScreenState extends State<LanguageScreen> {
       ),
       body: ListView(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 46,
-              decoration: BoxDecoration(
-                  border: Border.all(),
-                  borderRadius: BorderRadius.circular(10)),
-              child: ListTile(
-                title: Text(
-                  "English",
-                  style: GoogleFonts.poppins(
-                      fontSize: 14, fontWeight: FontWeight.w600),
-                ),
-                trailing: Icon(Icons.radio_button_off_sharp),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 46,
-              decoration: BoxDecoration(
-                  border: Border.all(),
-                  borderRadius: BorderRadius.circular(10)),
-              child: ListTile(
-                title: Text(
-                  "ગુજરાતી",
-                  style: GoogleFonts.poppins(
-                      fontSize: 14, fontWeight: FontWeight.w600),
-                ),
-                trailing: Icon(Icons.radio_button_off_sharp),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 46,
-              decoration: BoxDecoration(
-                  border: Border.all(),
-                  borderRadius: BorderRadius.circular(10)),
-              child: ListTile(
-                title: Text(
-                  "हिंदी",
-                  style: GoogleFonts.poppins(
-                      fontSize: 14, fontWeight: FontWeight.w600),
-                ),
-                trailing: Icon(Icons.radio_button_off_sharp),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 46,
-              decoration: BoxDecoration(
-                  border: Border.all(),
-                  borderRadius: BorderRadius.circular(10)),
-              child: ListTile(
-                title: Text(
-                  "मराठी",
-                  style: GoogleFonts.poppins(
-                      fontSize: 14, fontWeight: FontWeight.w600),
-                ),
-                trailing: Icon(Icons.radio_button_off_sharp),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 46,
-              decoration: BoxDecoration(
-                  border: Border.all(),
-                  borderRadius: BorderRadius.circular(10)),
-              child: ListTile(
-                title: Text(
-                  "தமிழ்",
-                  style: GoogleFonts.poppins(
-                      fontSize: 14, fontWeight: FontWeight.w600),
-                ),
-                trailing: Icon(Icons.radio_button_off_sharp),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 46,
-              decoration: BoxDecoration(
-                  border: Border.all(),
-                  borderRadius: BorderRadius.circular(10)),
-              child: ListTile(
-                title: Text(
-                  "اردو",
-                  style: GoogleFonts.poppins(
-                      fontSize: 14, fontWeight: FontWeight.w600),
-                ),
-                trailing: Icon(Icons.radio_button_off_sharp),
-              ),
+          Expanded(
+            child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: languages.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    height: 46,
+                    decoration: BoxDecoration(
+                        border: Border.all(),
+                        borderRadius: BorderRadius.circular(10)),
+                    child: ListTile(
+                      title: Text(
+                        languages[index],
+                        style: GoogleFonts.poppins(
+                            fontSize: 14, fontWeight: FontWeight.w600),
+                      ),
+                      trailing: Icon(Icons.radio_button_off_sharp),
+                    ),
+                  ),
+                );
+              },
             ),
           ),
         ],

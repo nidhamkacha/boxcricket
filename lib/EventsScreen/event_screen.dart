@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class EventScreen extends StatefulWidget {
@@ -9,6 +10,17 @@ class EventScreen extends StatefulWidget {
 }
 
 class _EventScreenState extends State<EventScreen> {
+  List<String> Headings = [
+    '4-Day Test Match',
+    'Practice With Max Academy',
+    'Test Match'
+  ];
+  List<String> SubHeadings = [
+    'Capital Cricket Club, Mota Varachha ',
+    'Cicket Zone, Dumas Road',
+    'Capital Cricket Club, Mota Varachha ',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,372 +82,504 @@ class _EventScreenState extends State<EventScreen> {
               ],
             ),
           ),
-          Container(
-            margin: EdgeInsets.all(8),
-            height: 288,
-            width: double.infinity,
-            decoration: BoxDecoration(
-                border: Border.all(), borderRadius: BorderRadius.circular(10)),
-            child: Column(
-              children: [
-                Container(
-                  height: 180,
+          Expanded(
+            child: ListView.builder(
+              itemCount: Headings.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                  margin: EdgeInsets.all(8),
+                  height: 288,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(10)),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(
-                        "4-Day Test Match",
-                        style: GoogleFonts.poppins(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white,
+                      Container(
+                        height: 180,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text(
+                              Headings[index],
+                              style: GoogleFonts.poppins(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.location_on_outlined,
+                                    color: Colors.white,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 8.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(SubHeadings[index],
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w400,
+                                                color: Colors.white)),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage(
+                                    "assets/images/Rectangle 412.png"),
+                                fit: BoxFit.fill)),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0, top: 8),
+                        child: Row(
+                          children: [
+                            Icon(Icons.group),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            Text(
+                              "19 Registered",
+                              style: GoogleFonts.poppins(
+                                  color: Color(0XFF707070),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                          ],
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(2.0),
+                        padding: const EdgeInsets.only(left: 8.0, top: 8),
                         child: Row(
                           children: [
-                            Icon(
-                              Icons.location_on_outlined,
-                              color: Colors.white,
+                            Icon(Icons.calendar_month_outlined),
+                            SizedBox(
+                              width: 20,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 8.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("Capital Cricket Club, Mota Varachha ",
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.white)),
-                                ],
-                              ),
+                            Text(
+                              "Fri,June 24-Sun,June 26",
+                              style: GoogleFonts.poppins(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0, top: 8),
+                        child: Row(
+                          children: [
+                            Icon(Icons.timer_outlined),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            Text(
+                              "05:00 AM",
+                              style: GoogleFonts.poppins(
+                                  color: Color(0XFF707070),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(left: 200, top: 3),
+                              height: 26,
+                              width: 30,
+                              decoration: BoxDecoration(
+                                  color: Color(0XFF78A408),
+                                  borderRadius: BorderRadius.circular(3)),
+                              child: Center(
+                                  child: Icon(
+                                Icons.arrow_forward_ios_rounded,
+                                color: Colors.white,
+                              )),
                             ),
                           ],
                         ),
                       ),
                     ],
                   ),
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/images/Rectangle 412.png"),
-                          fit: BoxFit.fill)),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8.0, top: 8),
-                  child: Row(
-                    children: [
-                      Icon(Icons.group),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        "19 Registered",
-                        style: GoogleFonts.poppins(
-                            color: Color(0XFF707070),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8.0, top: 8),
-                  child: Row(
-                    children: [
-                      Icon(Icons.calendar_month_outlined),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        "Fri,June 24-Sun,June 26",
-                        style: GoogleFonts.poppins(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8.0, top: 8),
-                  child: Row(
-                    children: [
-                      Icon(Icons.timer_outlined),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        "05:00 AM",
-                        style: GoogleFonts.poppins(
-                            color: Color(0XFF707070),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(left: 200, top: 3),
-                        height: 26,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            color: Color(0XFF78A408),
-                            borderRadius: BorderRadius.circular(3)),
-                        child: Center(
-                            child: Icon(
-                          Icons.arrow_forward_ios_rounded,
-                          color: Colors.white,
-                        )),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ), //first container Over
-          Container(
-            margin: EdgeInsets.all(8),
-            height: 288,
-            width: double.infinity,
-            decoration: BoxDecoration(
-                border: Border.all(), borderRadius: BorderRadius.circular(10)),
-            child: Column(
-              children: [
-                Container(
-                  height: 180,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        "Practice With Max Academy",
-                        style: GoogleFonts.poppins(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(2.0),
-                        child: Row(
-                          children: [
-                            Icon(
-                              Icons.location_on_outlined,
-                              color: Colors.white,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 8.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("Cricket Zone, Dumas Road ",
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.white)),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/images/Rectangle 412.png"),
-                          fit: BoxFit.fill)),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8.0, top: 8),
-                  child: Row(
-                    children: [
-                      Icon(Icons.group),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        "43 Registered",
-                        style: GoogleFonts.poppins(
-                            color: Color(0XFF707070),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8.0, top: 8),
-                  child: Row(
-                    children: [
-                      Icon(Icons.calendar_month_outlined),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        "Fri,June 24-Sun,June 26",
-                        style: GoogleFonts.poppins(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8.0, top: 8),
-                  child: Row(
-                    children: [
-                      Icon(Icons.timer_outlined),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        "05:00 AM",
-                        style: GoogleFonts.poppins(
-                            color: Color(0XFF707070),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(left: 200, top: 3),
-                        height: 26,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            color: Color(0XFF78A408),
-                            borderRadius: BorderRadius.circular(3)),
-                        child: Center(
-                            child: Icon(
-                          Icons.arrow_forward_ios_rounded,
-                          color: Colors.white,
-                        )),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ), //first container Over
-          Container(
-            margin: EdgeInsets.all(8),
-            height: 288,
-            width: double.infinity,
-            decoration: BoxDecoration(
-                border: Border.all(), borderRadius: BorderRadius.circular(10)),
-            child: Column(
-              children: [
-                Container(
-                  height: 180,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        "Test Match",
-                        style: GoogleFonts.poppins(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(2.0),
-                        child: Row(
-                          children: [
-                            Icon(
-                              Icons.location_on_outlined,
-                              color: Colors.white,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 8.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("Capital Cricket Club, Mota Varachha ",
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.white)),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/images/Rectangle 412.png"),
-                          fit: BoxFit.fill)),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8.0, top: 8),
-                  child: Row(
-                    children: [
-                      Icon(Icons.group),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        "25 Registered",
-                        style: GoogleFonts.poppins(
-                            color: Color(0XFF707070),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8.0, top: 8),
-                  child: Row(
-                    children: [
-                      Icon(Icons.calendar_month_outlined),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        "Fri,June 24-Sun,June 26",
-                        style: GoogleFonts.poppins(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8.0, top: 8),
-                  child: Row(
-                    children: [
-                      Icon(Icons.timer_outlined),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        "05:00 AM",
-                        style: GoogleFonts.poppins(
-                            color: Color(0XFF707070),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(left: 200, top: 3),
-                        height: 26,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            color: Color(0XFF78A408),
-                            borderRadius: BorderRadius.circular(3)),
-                        child: Center(
-                            child: Icon(
-                          Icons.arrow_forward_ios_rounded,
-                          color: Colors.white,
-                        )),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+                );
+              },
             ),
           ),
+          // Container(
+          //   margin: EdgeInsets.all(8),
+          //   height: 288,
+          //   width: double.infinity,
+          //   decoration: BoxDecoration(
+          //       border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          //   child: Column(
+          //     children: [
+          //       Container(
+          //         height: 180,
+          //         child: Column(
+          //           mainAxisAlignment: MainAxisAlignment.end,
+          //           children: [
+          //             Text(
+          //               "4-Day Test Match",
+          //               style: GoogleFonts.poppins(
+          //                 fontSize: 16,
+          //                 fontWeight: FontWeight.w700,
+          //                 color: Colors.white,
+          //               ),
+          //             ),
+          //             Padding(
+          //               padding: const EdgeInsets.all(2.0),
+          //               child: Row(
+          //                 children: [
+          //                   Icon(
+          //                     Icons.location_on_outlined,
+          //                     color: Colors.white,
+          //                   ),
+          //                   Padding(
+          //                     padding: const EdgeInsets.only(left: 8.0),
+          //                     child: Column(
+          //                       crossAxisAlignment: CrossAxisAlignment.start,
+          //                       children: [
+          //                         Text("Capital Cricket Club, Mota Varachha ",
+          //                             style: GoogleFonts.poppins(
+          //                                 fontSize: 16,
+          //                                 fontWeight: FontWeight.w400,
+          //                                 color: Colors.white)),
+          //                       ],
+          //                     ),
+          //                   ),
+          //                 ],
+          //               ),
+          //             ),
+          //           ],
+          //         ),
+          //         decoration: BoxDecoration(
+          //             image: DecorationImage(
+          //                 image: AssetImage("assets/images/Rectangle 412.png"),
+          //                 fit: BoxFit.fill)),
+          //       ),
+          //       Padding(
+          //         padding: const EdgeInsets.only(left: 8.0, top: 8),
+          //         child: Row(
+          //           children: [
+          //             Icon(Icons.group),
+          //             SizedBox(
+          //               width: 20,
+          //             ),
+          //             Text(
+          //               "19 Registered",
+          //               style: GoogleFonts.poppins(
+          //                   color: Color(0XFF707070),
+          //                   fontSize: 16,
+          //                   fontWeight: FontWeight.w500),
+          //             ),
+          //           ],
+          //         ),
+          //       ),
+          //       Padding(
+          //         padding: const EdgeInsets.only(left: 8.0, top: 8),
+          //         child: Row(
+          //           children: [
+          //             Icon(Icons.calendar_month_outlined),
+          //             SizedBox(
+          //               width: 20,
+          //             ),
+          //             Text(
+          //               "Fri,June 24-Sun,June 26",
+          //               style: GoogleFonts.poppins(
+          //                   color: Colors.black,
+          //                   fontSize: 16,
+          //                   fontWeight: FontWeight.w500),
+          //             ),
+          //           ],
+          //         ),
+          //       ),
+          //       Padding(
+          //         padding: const EdgeInsets.only(left: 8.0, top: 8),
+          //         child: Row(
+          //           children: [
+          //             Icon(Icons.timer_outlined),
+          //             SizedBox(
+          //               width: 20,
+          //             ),
+          //             Text(
+          //               "05:00 AM",
+          //               style: GoogleFonts.poppins(
+          //                   color: Color(0XFF707070),
+          //                   fontSize: 16,
+          //                   fontWeight: FontWeight.w500),
+          //             ),
+          //             Container(
+          //               margin: EdgeInsets.only(left: 200, top: 3),
+          //               height: 26,
+          //               width: 30,
+          //               decoration: BoxDecoration(
+          //                   color: Color(0XFF78A408),
+          //                   borderRadius: BorderRadius.circular(3)),
+          //               child: Center(
+          //                   child: Icon(
+          //                 Icons.arrow_forward_ios_rounded,
+          //                 color: Colors.white,
+          //               )),
+          //             ),
+          //           ],
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ), //first container Over
+          // Container(
+          //   margin: EdgeInsets.all(8),
+          //   height: 288,
+          //   width: double.infinity,
+          //   decoration: BoxDecoration(
+          //       border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          //   child: Column(
+          //     children: [
+          //       Container(
+          //         height: 180,
+          //         child: Column(
+          //           mainAxisAlignment: MainAxisAlignment.end,
+          //           children: [
+          //             Text(
+          //               "Practice With Max Academy",
+          //               style: GoogleFonts.poppins(
+          //                 fontSize: 16,
+          //                 fontWeight: FontWeight.w700,
+          //                 color: Colors.white,
+          //               ),
+          //             ),
+          //             Padding(
+          //               padding: const EdgeInsets.all(2.0),
+          //               child: Row(
+          //                 children: [
+          //                   Icon(
+          //                     Icons.location_on_outlined,
+          //                     color: Colors.white,
+          //                   ),
+          //                   Padding(
+          //                     padding: const EdgeInsets.only(left: 8.0),
+          //                     child: Column(
+          //                       crossAxisAlignment: CrossAxisAlignment.start,
+          //                       children: [
+          //                         Text("Cricket Zone, Dumas Road ",
+          //                             style: GoogleFonts.poppins(
+          //                                 fontSize: 16,
+          //                                 fontWeight: FontWeight.w400,
+          //                                 color: Colors.white)),
+          //                       ],
+          //                     ),
+          //                   ),
+          //                 ],
+          //               ),
+          //             ),
+          //           ],
+          //         ),
+          //         decoration: BoxDecoration(
+          //             image: DecorationImage(
+          //                 image: AssetImage("assets/images/Rectangle 412.png"),
+          //                 fit: BoxFit.fill)),
+          //       ),
+          //       Padding(
+          //         padding: const EdgeInsets.only(left: 8.0, top: 8),
+          //         child: Row(
+          //           children: [
+          //             Icon(Icons.group),
+          //             SizedBox(
+          //               width: 20,
+          //             ),
+          //             Text(
+          //               "43 Registered",
+          //               style: GoogleFonts.poppins(
+          //                   color: Color(0XFF707070),
+          //                   fontSize: 16,
+          //                   fontWeight: FontWeight.w500),
+          //             ),
+          //           ],
+          //         ),
+          //       ),
+          //       Padding(
+          //         padding: const EdgeInsets.only(left: 8.0, top: 8),
+          //         child: Row(
+          //           children: [
+          //             Icon(Icons.calendar_month_outlined),
+          //             SizedBox(
+          //               width: 20,
+          //             ),
+          //             Text(
+          //               "Fri,June 24-Sun,June 26",
+          //               style: GoogleFonts.poppins(
+          //                   color: Colors.black,
+          //                   fontSize: 16,
+          //                   fontWeight: FontWeight.w500),
+          //             ),
+          //           ],
+          //         ),
+          //       ),
+          //       Padding(
+          //         padding: const EdgeInsets.only(left: 8.0, top: 8),
+          //         child: Row(
+          //           children: [
+          //             Icon(Icons.timer_outlined),
+          //             SizedBox(
+          //               width: 20,
+          //             ),
+          //             Text(
+          //               "05:00 AM",
+          //               style: GoogleFonts.poppins(
+          //                   color: Color(0XFF707070),
+          //                   fontSize: 16,
+          //                   fontWeight: FontWeight.w500),
+          //             ),
+          //             Container(
+          //               margin: EdgeInsets.only(left: 200, top: 3),
+          //               height: 26,
+          //               width: 30,
+          //               decoration: BoxDecoration(
+          //                   color: Color(0XFF78A408),
+          //                   borderRadius: BorderRadius.circular(3)),
+          //               child: Center(
+          //                   child: Icon(
+          //                 Icons.arrow_forward_ios_rounded,
+          //                 color: Colors.white,
+          //               )),
+          //             ),
+          //           ],
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ), //first container Over
+          // Container(
+          //   margin: EdgeInsets.all(8),
+          //   height: 288,
+          //   width: double.infinity,
+          //   decoration: BoxDecoration(
+          //       border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          //   child: Column(
+          //     children: [
+          //       Container(
+          //         height: 180,
+          //         child: Column(
+          //           mainAxisAlignment: MainAxisAlignment.end,
+          //           children: [
+          //             Text(
+          //               "Test Match",
+          //               style: GoogleFonts.poppins(
+          //                 fontSize: 16,
+          //                 fontWeight: FontWeight.w700,
+          //                 color: Colors.white,
+          //               ),
+          //             ),
+          //             Padding(
+          //               padding: const EdgeInsets.all(2.0),
+          //               child: Row(
+          //                 children: [
+          //                   Icon(
+          //                     Icons.location_on_outlined,
+          //                     color: Colors.white,
+          //                   ),
+          //                   Padding(
+          //                     padding: const EdgeInsets.only(left: 8.0),
+          //                     child: Column(
+          //                       crossAxisAlignment: CrossAxisAlignment.start,
+          //                       children: [
+          //                         Text("Capital Cricket Club, Mota Varachha ",
+          //                             style: GoogleFonts.poppins(
+          //                                 fontSize: 16,
+          //                                 fontWeight: FontWeight.w400,
+          //                                 color: Colors.white)),
+          //                       ],
+          //                     ),
+          //                   ),
+          //                 ],
+          //               ),
+          //             ),
+          //           ],
+          //         ),
+          //         decoration: BoxDecoration(
+          //             image: DecorationImage(
+          //                 image: AssetImage("assets/images/Rectangle 412.png"),
+          //                 fit: BoxFit.fill)),
+          //       ),
+          //       Padding(
+          //         padding: const EdgeInsets.only(left: 8.0, top: 8),
+          //         child: Row(
+          //           children: [
+          //             Icon(Icons.group),
+          //             SizedBox(
+          //               width: 20,
+          //             ),
+          //             Text(
+          //               "25 Registered",
+          //               style: GoogleFonts.poppins(
+          //                   color: Color(0XFF707070),
+          //                   fontSize: 16,
+          //                   fontWeight: FontWeight.w500),
+          //             ),
+          //           ],
+          //         ),
+          //       ),
+          //       Padding(
+          //         padding: const EdgeInsets.only(left: 8.0, top: 8),
+          //         child: Row(
+          //           children: [
+          //             Icon(Icons.calendar_month_outlined),
+          //             SizedBox(
+          //               width: 20,
+          //             ),
+          //             Text(
+          //               "Fri,June 24-Sun,June 26",
+          //               style: GoogleFonts.poppins(
+          //                   color: Colors.black,
+          //                   fontSize: 16,
+          //                   fontWeight: FontWeight.w500),
+          //             ),
+          //           ],
+          //         ),
+          //       ),
+          //       Padding(
+          //         padding: const EdgeInsets.only(left: 8.0, top: 8),
+          //         child: Row(
+          //           children: [
+          //             Icon(Icons.timer_outlined),
+          //             SizedBox(
+          //               width: 20,
+          //             ),
+          //             Text(
+          //               "05:00 AM",
+          //               style: GoogleFonts.poppins(
+          //                   color: Color(0XFF707070),
+          //                   fontSize: 16,
+          //                   fontWeight: FontWeight.w500),
+          //             ),
+          //             Container(
+          //               margin: EdgeInsets.only(left: 200, top: 3),
+          //               height: 26,
+          //               width: 30,
+          //               decoration: BoxDecoration(
+          //                   color: Color(0XFF78A408),
+          //                   borderRadius: BorderRadius.circular(3)),
+          //               child: Center(
+          //                   child: Icon(
+          //                 Icons.arrow_forward_ios_rounded,
+          //                 color: Colors.white,
+          //               )),
+          //             ),
+          //           ],
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
