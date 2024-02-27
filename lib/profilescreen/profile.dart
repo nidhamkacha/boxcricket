@@ -9,6 +9,24 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  List<String> menunames = [
+    'Edit Profile',
+    'Notifications',
+    'Payment Methods',
+    'Language',
+    'Settings',
+    'About',
+    'Update',
+  ];
+  List<Widget> menuitems = [
+    Icon(Icons.edit),
+    Icon(Icons.notifications),
+    Icon(Icons.payment),
+    Icon(Icons.language),
+    Icon(Icons.settings),
+    Icon(Icons.info),
+    Icon(Icons.update),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,165 +70,35 @@ class _ProfileScreenState extends State<ProfileScreen> {
         SizedBox(
           height: 12,
         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            height: 46,
-            width: double.infinity,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Icon(Icons.edit_outlined),
-                Text(
-                  "Edit Profile",
-                  style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600),
+        Expanded(
+          child: ListView.builder(
+            itemCount: menuitems.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 46,
+                  width: double.infinity,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      menuitems[index],
+                      Text(
+                        menunames[index],
+                        style: GoogleFonts.poppins(
+                            fontSize: 16,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Icon(Icons.arrow_forward_ios_rounded),
+                    ],
+                  ),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all()),
                 ),
-                Icon(Icons.arrow_forward_ios_rounded),
-              ],
-            ),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10), border: Border.all()),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            height: 46,
-            width: double.infinity,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Icon(Icons.notifications_none),
-                Text(
-                  "Notification",
-                  style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600),
-                ),
-                Icon(Icons.arrow_forward_ios_rounded),
-              ],
-            ),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10), border: Border.all()),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            height: 46,
-            width: double.infinity,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Icon(Icons.account_balance_wallet_outlined),
-                Text(
-                  "Payment Methods",
-                  style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600),
-                ),
-                Icon(Icons.arrow_forward_ios_rounded),
-              ],
-            ),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10), border: Border.all()),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            height: 46,
-            width: double.infinity,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Icon(Icons.language),
-                Text(
-                  "Language",
-                  style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600),
-                ),
-                Icon(Icons.arrow_forward_ios_rounded),
-              ],
-            ),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10), border: Border.all()),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            height: 46,
-            width: double.infinity,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Icon(Icons.settings_outlined),
-                Text(
-                  "Settings",
-                  style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600),
-                ),
-                Icon(Icons.arrow_forward_ios_rounded),
-              ],
-            ),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10), border: Border.all()),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            height: 46,
-            width: double.infinity,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Icon(Icons.info_outline_rounded),
-                Text(
-                  "About",
-                  style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600),
-                ),
-                Icon(Icons.arrow_forward_ios_rounded),
-              ],
-            ),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10), border: Border.all()),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            height: 46,
-            width: double.infinity,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Icon(Icons.update),
-                Text(
-                  "Update",
-                  style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600),
-                ),
-                Icon(Icons.arrow_forward_ios_rounded),
-              ],
-            ),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10), border: Border.all()),
+              );
+            },
           ),
         ),
         SizedBox(

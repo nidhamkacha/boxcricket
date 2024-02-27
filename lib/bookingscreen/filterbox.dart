@@ -11,6 +11,15 @@ class BoxFilterScreen extends StatefulWidget {
 class _BoxFilterScreenState extends State<BoxFilterScreen> {
   double _currentSliderValue = 10;
   bool? isChecked = true;
+  List<String> Amenities = [
+    "Umpires",
+    "Balls",
+    "Flood Lights",
+    "Water",
+    "Sight Screen",
+    "Refreshments",
+    "Washroom",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -256,167 +265,198 @@ class _BoxFilterScreenState extends State<BoxFilterScreen> {
                     fontWeight: FontWeight.w700),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(left: 15),
-                    height: 20,
-                    width: 20,
-                    decoration: BoxDecoration(
-                        border: Border.all(),
-                        borderRadius: BorderRadius.circular(3)),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text("Umpires",
-                      style: GoogleFonts.poppins(
-                          color: Color(0XFF000000),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600)),
-                ],
+            Expanded(
+              child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: Amenities.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 15),
+                          height: 20,
+                          width: 20,
+                          decoration: BoxDecoration(
+                              border: Border.all(),
+                              borderRadius: BorderRadius.circular(3)),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(Amenities[index],
+                            style: GoogleFonts.poppins(
+                                color: Color(0XFF000000),
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600)),
+                      ],
+                    ),
+                  );
+                },
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(left: 15),
-                    height: 20,
-                    width: 20,
-                    decoration: BoxDecoration(
-                        border: Border.all(),
-                        borderRadius: BorderRadius.circular(3)),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text("Balls",
-                      style: GoogleFonts.poppins(
-                          color: Color(0XFF000000),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600)),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(left: 15),
-                    height: 20,
-                    width: 20,
-                    decoration: BoxDecoration(
-                        border: Border.all(),
-                        borderRadius: BorderRadius.circular(3)),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text("Flood Lights",
-                      style: GoogleFonts.poppins(
-                          color: Color(0XFF000000),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600)),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(left: 15),
-                    height: 20,
-                    width: 20,
-                    decoration: BoxDecoration(
-                        border: Border.all(),
-                        borderRadius: BorderRadius.circular(3)),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text("Water",
-                      style: GoogleFonts.poppins(
-                          color: Color(0XFF000000),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600)),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(left: 15),
-                    height: 20,
-                    width: 20,
-                    decoration: BoxDecoration(
-                        border: Border.all(),
-                        borderRadius: BorderRadius.circular(3)),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text("Sight Screen",
-                      style: GoogleFonts.poppins(
-                          color: Color(0XFF000000),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600)),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(left: 15),
-                    height: 20,
-                    width: 20,
-                    decoration: BoxDecoration(
-                        border: Border.all(),
-                        borderRadius: BorderRadius.circular(3)),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text("Refreshments",
-                      style: GoogleFonts.poppins(
-                          color: Color(0XFF000000),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600)),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(left: 15),
-                    height: 20,
-                    width: 20,
-                    decoration: BoxDecoration(
-                        border: Border.all(),
-                        borderRadius: BorderRadius.circular(3)),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text("Washroom",
-                      style: GoogleFonts.poppins(
-                          color: Color(0XFF000000),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600)),
-                ],
-              ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.all(5.0),
+            //   child: Row(
+            //     children: [
+            //       Container(
+            //         margin: EdgeInsets.only(left: 15),
+            //         height: 20,
+            //         width: 20,
+            //         decoration: BoxDecoration(
+            //             border: Border.all(),
+            //             borderRadius: BorderRadius.circular(3)),
+            //       ),
+            //       SizedBox(
+            //         width: 10,
+            //       ),
+            //       Text("Umpires",
+            //           style: GoogleFonts.poppins(
+            //               color: Color(0XFF000000),
+            //               fontSize: 16,
+            //               fontWeight: FontWeight.w600)),
+            //     ],
+            //   ),
+            // ),
+            // Padding(
+            //   padding: const EdgeInsets.all(5.0),
+            //   child: Row(
+            //     children: [
+            //       Container(
+            //         margin: EdgeInsets.only(left: 15),
+            //         height: 20,
+            //         width: 20,
+            //         decoration: BoxDecoration(
+            //             border: Border.all(),
+            //             borderRadius: BorderRadius.circular(3)),
+            //       ),
+            //       SizedBox(
+            //         width: 10,
+            //       ),
+            //       Text("Balls",
+            //           style: GoogleFonts.poppins(
+            //               color: Color(0XFF000000),
+            //               fontSize: 16,
+            //               fontWeight: FontWeight.w600)),
+            //     ],
+            //   ),
+            // ),
+            // Padding(
+            //   padding: const EdgeInsets.all(5.0),
+            //   child: Row(
+            //     children: [
+            //       Container(
+            //         margin: EdgeInsets.only(left: 15),
+            //         height: 20,
+            //         width: 20,
+            //         decoration: BoxDecoration(
+            //             border: Border.all(),
+            //             borderRadius: BorderRadius.circular(3)),
+            //       ),
+            //       SizedBox(
+            //         width: 10,
+            //       ),
+            //       Text("Flood Lights",
+            //           style: GoogleFonts.poppins(
+            //               color: Color(0XFF000000),
+            //               fontSize: 16,
+            //               fontWeight: FontWeight.w600)),
+            //     ],
+            //   ),
+            // ),
+            // Padding(
+            //   padding: const EdgeInsets.all(5.0),
+            //   child: Row(
+            //     children: [
+            //       Container(
+            //         margin: EdgeInsets.only(left: 15),
+            //         height: 20,
+            //         width: 20,
+            //         decoration: BoxDecoration(
+            //             border: Border.all(),
+            //             borderRadius: BorderRadius.circular(3)),
+            //       ),
+            //       SizedBox(
+            //         width: 10,
+            //       ),
+            //       Text("Water",
+            //           style: GoogleFonts.poppins(
+            //               color: Color(0XFF000000),
+            //               fontSize: 16,
+            //               fontWeight: FontWeight.w600)),
+            //     ],
+            //   ),
+            // ),
+            // Padding(
+            //   padding: const EdgeInsets.all(5.0),
+            //   child: Row(
+            //     children: [
+            //       Container(
+            //         margin: EdgeInsets.only(left: 15),
+            //         height: 20,
+            //         width: 20,
+            //         decoration: BoxDecoration(
+            //             border: Border.all(),
+            //             borderRadius: BorderRadius.circular(3)),
+            //       ),
+            //       SizedBox(
+            //         width: 10,
+            //       ),
+            //       Text("Sight Screen",
+            //           style: GoogleFonts.poppins(
+            //               color: Color(0XFF000000),
+            //               fontSize: 16,
+            //               fontWeight: FontWeight.w600)),
+            //     ],
+            //   ),
+            // ),
+            // Padding(
+            //   padding: const EdgeInsets.all(5.0),
+            //   child: Row(
+            //     children: [
+            //       Container(
+            //         margin: EdgeInsets.only(left: 15),
+            //         height: 20,
+            //         width: 20,
+            //         decoration: BoxDecoration(
+            //             border: Border.all(),
+            //             borderRadius: BorderRadius.circular(3)),
+            //       ),
+            //       SizedBox(
+            //         width: 10,
+            //       ),
+            //       Text("Refreshments",
+            //           style: GoogleFonts.poppins(
+            //               color: Color(0XFF000000),
+            //               fontSize: 16,
+            //               fontWeight: FontWeight.w600)),
+            //     ],
+            //   ),
+            // ),
+            // Padding(
+            //   padding: const EdgeInsets.all(5.0),
+            //   child: Row(
+            //     children: [
+            //       Container(
+            //         margin: EdgeInsets.only(left: 15),
+            //         height: 20,
+            //         width: 20,
+            //         decoration: BoxDecoration(
+            //             border: Border.all(),
+            //             borderRadius: BorderRadius.circular(3)),
+            //       ),
+            //       SizedBox(
+            //         width: 10,
+            //       ),
+            //       Text("Washroom",
+            //           style: GoogleFonts.poppins(
+            //               color: Color(0XFF000000),
+            //               fontSize: 16,
+            //               fontWeight: FontWeight.w600)),
+            //     ],
+            //   ),
+            // ),
             SizedBox(
               height: 46,
               width: double.infinity,
